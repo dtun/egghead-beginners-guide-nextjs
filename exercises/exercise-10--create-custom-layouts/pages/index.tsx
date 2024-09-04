@@ -1,4 +1,7 @@
 import { Heading } from '@chakra-ui/react'
+import { ReactElement } from 'react'
+
+import Layout from '../src/components/layout'
 
 const Home = () => {
   return (
@@ -7,4 +10,9 @@ const Home = () => {
     </Heading>
   )
 }
+
+Home.getLayout = (page: ReactElement) => {
+  return <Layout>{page}</Layout>
+}
+
 export default Home
