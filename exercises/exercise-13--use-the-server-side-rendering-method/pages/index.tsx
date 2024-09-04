@@ -1,5 +1,5 @@
 // ✍️ import GetServerSideProps from 'next'
-import type { GetStaticProps } from 'next'
+import type { GetServerSideProps } from 'next'
 import Link from 'next/link'
 import { List, ListItem, Container, Heading } from '@chakra-ui/react'
 
@@ -23,7 +23,9 @@ const Home = ({ genres }: Props) => {
 }
 
 // ✍️ export the getServerSideProps method instead
-export const getStaticProps: GetStaticProps<Props> = async (context) => {
+export const getServerSideProps: GetServerSideProps<Props> = async (
+  context
+) => {
   const genres = [
     'rock',
     'country',
